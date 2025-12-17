@@ -41,8 +41,8 @@ For users who are using the OnePlus 13 series, please refer to [https://roms.dan
 
 - 系统：系统正常模式、系统安全模式、root、root 安全模式（临时停用所有模块仅加载核心功能）、模块、框架、插件和应用等都在此范围内
 - 恢复模式（recovery）：卡刷和 adb 侧载（adb sideload）在此进行（使用 ``.zip`` 类型的文件并配以安卓恢复模式的操作或 adb 工具）
-- 动态刷机模式（fastbootd）：fastboot 的动态模式用于安卓 10 及以上对 ``super`` 分区内的逻辑分区进行动态操作（使用以 ``super`` 分区内的逻辑分区为名的 ``.img`` 文件并配以 fastboot 工具）
-- 刷机模式（fastboot）：线刷和临时启动通常在此进行（使用 ``.img`` 类型的文件并配以 fastboot 工具）
+- 适用于动态分区结构的 fastboot 模式（fastbootd）：用于安卓 10 及以上对 ``super`` 分区内的逻辑分区进行动态操作（使用以 ``super`` 分区内的逻辑分区为名的 ``.img`` 文件并配以 fastboot 工具）
+- 快速引导模式/快速启动模式/刷机模式（fastboot）：线刷和临时启动通常在此进行（使用 ``.img`` 类型的文件并配以 fastboot 工具）
 - 引导加载程序（bootloader）：线刷和临时启动通常在此进行（使用 ``.img`` 类型的文件并配以 fastboot 工具）
 - 深刷：形如 9008 的深刷救砖（使用形如 ``.ops`` 的包含详细分区信息的原厂深刷文件并配以形如 MSM 的具有强制下载功能的工具）
 - 烧录：烧录主板（使用包含详细主板信息的原厂烧录文件并配以高压供电线、强制下载线和具有主板烧录功能的工具）

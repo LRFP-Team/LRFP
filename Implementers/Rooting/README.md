@@ -2,13 +2,13 @@
 
 This folder aims to archive the latest versions of different Magisk, Apatch (AP), and KernelSU (KSU) branches. 
 
-Please also consider using the latest one generated in the ``Actions`` tab of the corresponding GitHub repository. 
+Please also consider using the latest one generated in the ``Actions`` tab of the corresponding GitHub repository if open-source. 
 
 Branches within the same series are enumerated in ascending order of time. As there are many kernel files in KSU and its branches, they would not be stored here. 
 
 - Magisk and its branches 
   - Magisk / Magisk Beta / Magisk Canary / Magisk Debug: [https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
-  - Magisk Alpha
+  - Magisk Alpha (closed-source)
     - [https://github.com/CoderTyn/Magisk-Alpha](https://github.com/CoderTyn/Magisk-Alpha)
     - [https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
     - [https://t.me/magiskalpha](https://t.me/magiskalpha)
@@ -40,13 +40,13 @@ Compared to Riru, Zygisk allows Magisk to run within Zygote, offering more preci
 
 本文件夹旨在存储不同 Magisk、Apatch (AP) 和 KernelSU (KSU) 分支的最新版本。
 
-与此同时，请考虑使用相应 GitHub 存储库中 ``Actions`` 选项卡里的最新版本。
+对于开源存储库，请一并考虑使用相应 GitHub 存储库中 ``Actions`` 选项卡里的最新版本。
 
 同一系列的分支按时间顺序升序枚举；由于 KSU 及其分支的内核文件太多，此处不存储此类文件。
 
 - 面具及其分支
   - 面具 / Beta 版面具 / 金丝雀面具 / Debug 版面具：[https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
-  - 阿尔法面具
+  - 阿尔法面具（闭源）
     - [https://github.com/CoderTyn/Magisk-Alpha](https://github.com/CoderTyn/Magisk-Alpha)
     - [https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
     - [https://t.me/magiskalpha](https://t.me/magiskalpha)

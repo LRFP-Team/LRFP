@@ -1,6 +1,6 @@
 ## Bypassers
 
-Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal root and Zygisk bypassing combination, followed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta + built-in Zygisk. 
+Currently, SukiSU-Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal root and Zygisk bypassing combination, followed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta + built-in Zygisk. 
 
 Given the following definitions, the development of bypassing can be briefly described as follows. 
 
@@ -17,8 +17,8 @@ Given the following definitions, the development of bypassing can be briefly des
 - Magisk Fork + Zygisk Fork + Shamiko + LSPosed Fork + PIF + TS (2024), 
 - Magisk Fork + Zygisk Fork + SUSFS/Shamiko/Zygisk Assistant + LSPosed Fork + PIF + TS (the first season in 2025), 
 - Magisk Fork + Zygisk Fork + SUSFS/Shamiko/NoHello + LSPosed Fork + PIF + TS + VBMeta Fixer + Cleanup (the second season in 2025), 
-- SukiSU Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
-- SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
+- SukiSU-Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
+- SukiSU-Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
@@ -31,36 +31,35 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
 
 While following the tutorials, please also consider referring to the documentation and the ``Actions`` tab of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
 
-### Using KernelSU (KSU) / KSU Next (KSUN) / SukiSU Ultra
+### Using KernelSU (KSU) / KSU Next (KSUN) / SukiSU-Ultra
 
-- Install the latest [SukiSU Ultra](https://github.com/SukiSU Ultra-Ultra/SukiSU Ultra-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
-  - Configure in the Super User tab of the SukiSU Ultra Manager
+- Install the latest [SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
+  - Patch the kernel to support SukiSU-Ultra and SUSFS
+  - Configure in the Super User tab of the SukiSU-Ultra Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
-    - Launch the applications requiring root privileges, such as the MT Manager, and grant requests for root privileges in SukiSU Ultra
-  - Deploy the SUSFS module in the SukiSU Ultra layer
-    -  Embed (as a kernel module) or install (as a system module) the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU Ultra layer
-  - Deploy the system modules in the SukiSU Ultra layer
-    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU Ultra layer (If you are using Zygisk Next version ``1.2.9.1`` or lower, please also consider installing the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the SukiSU Ultra layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
+  - Deploy the system modules in the SukiSU-Ultra layer
+    - Install the latest [susfs4ksu](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU-Ultra layer
+    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU-Ultra layer (If you are using Zygisk Next version ``1.2.9.1`` or lower, please also consider installing the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the SukiSU-Ultra layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
       - To prevent some applications from not running properly, it is recommended to disable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``0``) (this configuration takes effect after rebooting)
       - To prevent some applications from not running properly, it is recommended to disable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker system``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``0``) (this configuration takes effect after rebooting)
       - Please keep the switches of ``Use anonymous memory`` and ``Use Zygisk Next linker`` in the same state to avoid being detected
       - Remove the Shamiko, NoHello, and Zygisk Assistant modules, as well as their related folders in ``/data/adb``
       - Reboot the device
-    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU Ultra layer
+    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU-Ultra layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
-      - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU Ultra manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
+      - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU-Ultra manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
       - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
       - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
       - Configure the HMA
         - Hide HMA's icon from the launcher in HMA's settings page
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
-        - Except for the SukiSU Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the SukiSU Ultra layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
-    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU Ultra layer
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
+        - Except for the SukiSU-Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
+    - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the SukiSU-Ultra layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU-Ultra layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
         - Obtain an alternative ``keybox.xml``
@@ -79,8 +78,8 @@ While following the tutorials, please also consider referring to the documentati
         - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
       - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
       - ~~Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20251201``~~
-    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU Ultra layer if the device does not have a proper vbmeta digest
-    - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the SukiSU Ultra layer if necessary for vulnerability fixes
+    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU-Ultra layer if the device does not have a proper vbmeta digest
+    - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the SukiSU-Ultra layer if necessary for vulnerability fixes
 - View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
 
 ### Using Official Magisk (Including Release, Beta, Canary, Debug, and Nightly Versions) or Magisk Alpha
@@ -107,7 +106,7 @@ While following the tutorials, please also consider referring to the documentati
     - Configure the HMA
       - Hide HMA's icon from the launcher in HMA's settings page
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
-      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
+      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
@@ -170,7 +169,7 @@ While following the tutorials, please also consider referring to the documentati
       - Configure the HMA
         - Hide HMA's icon from the launcher in HMA's settings page
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Apatch layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
@@ -212,7 +211,7 @@ While following the tutorials, please also consider referring to the documentati
     - Configure the HMA
       - Hide HMA's icon from the launcher in HMA's settings page
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
-      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
+      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
@@ -297,13 +296,13 @@ Update the Zygisk Next module to 1.3.0 and later.
 
 - Magisk and its branches: Use Magisk Alpha and install the latest Shamiko module
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
-- KSU and its branches: Use SukiSU Ultra and Install the latest SUSFS module as a system module
+- KSU and its branches: Use SukiSU-Ultra and Install the latest SUSFS module as a system module
 
-##### Risky application detected (bypassed HMA(L) with Code 3)
+##### Risky application detected (bypassed HMA and its branches with Code 3)
 
 The logic of this detection is to start an activity of the target application under Android 13. This detection is handled by ``HMA_v3.5`` from June 24th, 2025. 
 
-##### Risky application detected (bypassed HMA(L) with Code 4)
+##### Risky application detected (bypassed HMA and its branches with Code 4)
 
 The logic of this detection is to find folders named by the application package names recorded in the library under certain specific directories. Please try to check whether there is a folder named by the listed package names found by the detector in ``/sdcard/Android/data``. If the folder is empty, you can try to delete it. 
 If necessary, please assign the listed application package names found by the detector to the variable ``packageNames`` with a space character as the separator. Subsequently, execute the following script as a non-root user to observe which folders named by the package names can be detected by applications without root permissions. 
@@ -404,7 +403,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 ## 过检方法
 
-目前，SukiSU Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的 root + Zygisk 隐藏组合，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + 内置 Zygisk。
+目前，SukiSU-Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的 root + Zygisk 隐藏组合，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + 内置 Zygisk。
 
 通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，将 Zygisk Fork 定义为内置 Zygisk 和其它 Zygisk 实现，将 LSPosed Fork 定义为 LSPosed 及其分支，过检的发展历程可以简要描述如下。
 
@@ -417,8 +416,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - Magisk Fork + Zygisk Fork + Shamiko + LSPosed Fork + PIF + TS（2024 年）；
 - Magisk Fork + Zygisk Fork + SUSFS/Shamiko + LSPosed Fork + PIF + TS（2025 年第一季度）；
 - Magisk Fork + Zygisk Fork + SUSFS/Shamiko/NoHello + LSPosed Fork + PIF + TS + VBMeta Fixer + 残留清理（2025 年第二季度）；
-- SukiSU Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第三季度）以及；
-- SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第四季度）。
+- SukiSU-Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第三季度）以及；
+- SukiSU-Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第四季度）。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
@@ -431,35 +430,34 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``Actions`` 选项卡（如有）。
 
-### 正在使用 KernelSU (KSU) / KSU Next (KSUN) / SukiSU Ultra
+### 正在使用 KernelSU (KSU) / KSU Next (KSUN) / SukiSU-Ultra
 
-- 安装 SukiSU Ultra GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU Ultra](https://github.com/SukiSU Ultra-Ultra/SukiSU Ultra-Ultra/actions)
-  - 在 SukiSU Ultra 管理器的超级用户页内进行配置
+- 安装 SukiSU-Ultra GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
+  - 修补内核以支持 SukiSU-Ultra 和 SUSFS
+  - 在 SukiSU-Ultra 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
-    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU Ultra 管理器进行授权
-  - 在 SukiSU Ultra 层部署 SUSFS
-    - 在 SukiSU Ultra 层嵌入（作为内核模块）或安装（作为系统模块）最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-  - 在 SukiSU Ultra 层部署系统模块
-    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请考虑在 SukiSU Ultra 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
+  - 在 SukiSU-Ultra 层部署系统模块
+    - 在 SukiSU-Ultra 层安装最新版 [susfs4ksu](https://github.com/sidex15/susfs4ksu-module) 模块
+    - 在 SukiSU-Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请考虑在 SukiSU-Ultra 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
       - 为避免某些应用程序无法正确运行，推荐禁用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``0``）（此选项在设备重启后才会生效）
       - 为避免某些应用程序无法正确运行，推荐禁用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker system``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``0``）（此选项在设备重启后才会生效）
       - 请保持“使用匿名内存”和“使用 Zygisk Next 链接器”同开同关以免被检测到
       - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
-    - 在 SukiSU Ultra 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 在 SukiSU-Ultra 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
-      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击 SukiSU Ultra 管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
+      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击 SukiSU-Ultra 管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
       - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
       - 配置 HMA 插件
         - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
         - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 SukiSU Ultra 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
-    - 在 SukiSU Ultra 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+    - 在 SukiSU-Ultra 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+    - 在 SukiSU-Ultra 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
         - 获取 ``keybox.xml``
@@ -478,8 +476,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
       - ~~使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20251201`` 的格式写入该文件~~
-    - 若设备的 vbmeta digest 不正确可在 SukiSU Ultra 层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-    - 如有修复漏洞需要可在 SukiSU Ultra 层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+    - 若设备的 vbmeta digest 不正确可在 SukiSU-Ultra 层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+    - 如有修复漏洞需要可在 SukiSU-Ultra 层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 - 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版、Debug 版和每夜版）或 Alpha 版面具
@@ -506,7 +504,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
     - 配置 HMA 插件
       - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
       - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
+      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
   - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -568,7 +566,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 配置 HMA 插件
         - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
         - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 Apatch 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
     - 在 Apatch 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -610,7 +608,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
     - 配置 HMA 插件
       - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
       - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
+      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装最新版 [Play Integrity Fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
   - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -695,13 +693,13 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 - Magisk 系列：使用 Magisk Alpha 并安装最新版 Shamiko 模块
 - Apatch 系列：以内核模块的形式嵌入 Cherish Peekaboo 模块（请自行排查是否需要 compat 版本）
-- KSU 系列：使用 SukiSU Ultra 并安装最新版 SUSFS 模块
+- KSU 系列：使用 SukiSU-Ultra 并安装最新版 SUSFS 模块
 
-##### 检测到风险应用（绕过 HMA(L) 的代码 3）
+##### 检测到风险应用（绕过 HMA 及其分支的代码 3）
 
 该检测适用于安卓 13 以下的操作系统，通过启动目标应用的 Activity 实现检测，已于 2025 年 6 月 25 日在 ``HMA_v3.5.r449.1d951a3 (449)`` 中得到修复。
 
-##### 检测到风险应用（绕过 HMA(L) 的代码 4）
+##### 检测到风险应用（绕过 HMA 及其分支的代码 4）
 
 该检测原理为找到了某些特定目录下存在以与库中记录的应用包名命名的文件夹，请尝试查看 ``/sdcard/Android/data`` 下是否存在以所列出包名命名的文件夹，如果该文件夹为空可尝试将其删除；
 如有必要，请将所列出的应用包名以空格为分隔符赋值为变量 ``packageNames``，随后以普通用户身份执行以下脚本观察无 root 权限的应用可以检测到哪些以包名命名的文件夹。

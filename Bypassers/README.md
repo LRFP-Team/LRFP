@@ -59,6 +59,9 @@ While following the tutorials, please also consider referring to the documentati
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
         - Except for the SukiSU-Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the SukiSU-Ultra layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
+      - Enable the ``Spoof Build`` option via the web UI
+      - Enable the ``Spoof Build (Play Store)``, the ``Spoof Props``, and ``Spoof Provider`` options via the web UI if you wish to
+      - Try to enable the ``Spoof Signature`` and relaunch the web UI: if it shows that the ROM is already signed with a release key during the process, turn off the ``Spoof Signature`` option; otherwise, please ask your ROM developer to sign the ROM during building the ROM
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU-Ultra layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -109,6 +112,9 @@ While following the tutorials, please also consider referring to the documentati
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Enable the ``Spoof Build`` option via a third-party web UI like [MMRL](https://github.com/MMRLApp/MMRL/actions)
+    - Enable the ``Spoof Build (Play Store)``, the ``Spoof Props``, and ``Spoof Provider`` options via a third-party web UI like [MMRL](https://github.com/MMRLApp/MMRL/actions) if you wish to
+    - Try to enable the ``Spoof Signature`` and relaunch the third-party web UI: if it shows that the ROM is already signed with a release key during the process, turn off the ``Spoof Signature`` option; otherwise, please ask your ROM developer to sign the ROM during building the ROM
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
     - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
       - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -172,6 +178,9 @@ While following the tutorials, please also consider referring to the documentati
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Apatch layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
+      - Enable the ``Spoof Build`` option via the web UI
+      - Enable the ``Spoof Build (Play Store)``, the ``Spoof Props``, and ``Spoof Provider`` options via the web UI if you wish to
+      - Try to enable the ``Spoof Signature`` and relaunch the web UI: if it shows that the ROM is already signed with a release key during the process, turn off the ``Spoof Signature`` option; otherwise, please ask your ROM developer to sign the ROM during building the ROM
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -214,6 +223,9 @@ While following the tutorials, please also consider referring to the documentati
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA.md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others](https://github.com/LRFP-Team/LRFP/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Enable the ``Spoof Build`` option via a third-party web UI like [MMRL](https://github.com/MMRLApp/MMRL/actions)
+    - Enable the ``Spoof Build (Play Store)``, the ``Spoof Props``, and ``Spoof Provider`` options via a third-party web UI like [MMRL](https://github.com/MMRLApp/MMRL/actions) if you wish to
+    - Try to enable the ``Spoof Signature`` and relaunch the third-party web UI: if it shows that the ROM is already signed with a release key during the process, turn off the ``Spoof Signature`` option; otherwise, please ask your ROM developer to sign the ROM during building the ROM
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
     - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
       - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -457,6 +469,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 SukiSU-Ultra 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+      - 通过 web UI 启用 ``Spoof Build`` 选项
+      - 如果需要，可以通过 web UI 启用 ``Spoof Build (Play Store)``、``Spoof Props`` 和 ``Spoof Provider`` 选项
+      - 尝试启用 ``Spoof Signature`` 并重新启动 web UI：如果在此过程中显示 ROM 已使用发布密钥签名，请关闭 ``Spoof Signature`` 选项；否则，请让您的 ROM 开发者在构建 ROM 时对其进行签名
     - 在 SukiSU-Ultra 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
@@ -507,6 +522,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+    - 通过第三方 web UI（例如 [MMRL](https://github.com/MMRLApp/MMRL/actions)）启用 ``Spoof Build`` 选项
+    - 如果需要，可以通过第三方 web UI（例如 [MMRL](https://github.com/MMRLApp/MMRL/actions)）启用 ``Spoof Build (Play Store)``、``Spoof Props`` 和 ``Spoof Provider`` 选项
+    - 尝试启用 ``Spoof Signature`` 并重新启动第三方 web UI：如果在此过程中显示 ROM 已使用发布密钥签名，请关闭 ``Spoof Signature`` 选项；否则，请让您的 ROM 开发者在构建 ROM 时对其进行签名
   - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
     - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
       - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
@@ -569,6 +587,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 Apatch 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+      - 通过 web UI 启用 ``Spoof Build`` 选项
+      - 如果需要，可以通过 web UI 启用 ``Spoof Build (Play Store)``、``Spoof Props`` 和 ``Spoof Provider`` 选项
+      - 尝试启用 ``Spoof Signature`` 并重新启动 web UI：如果在此过程中显示 ROM 已使用发布密钥签名，请关闭 ``Spoof Signature`` 选项；否则，请让您的 ROM 开发者在构建 ROM 时对其进行签名
     - 在 Apatch 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
@@ -611,6 +632,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA.md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装最新版 [Play Integrity Fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+    - 通过第三方 web UI（例如 [MMRL](https://github.com/MMRLApp/MMRL/actions)）启用 ``Spoof Build`` 选项
+    - 如果需要，可以通过第三方 web UI（例如 [MMRL](https://github.com/MMRLApp/MMRL/actions)）启用 ``Spoof Build (Play Store)``、``Spoof Props`` 和 ``Spoof Provider`` 选项
+    - 尝试启用 ``Spoof Signature`` 并重新启动第三方 web UI：如果在此过程中显示 ROM 已使用发布密钥签名，请关闭 ``Spoof Signature`` 选项；否则，请让您的 ROM 开发者在构建 ROM 时对其进行签名
   - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
     - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
       - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）

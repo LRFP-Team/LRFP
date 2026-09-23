@@ -26,10 +26,12 @@ only the version in the latest successful workflow triggered by the ``push`` wil
     - ReSukiSU (forked from SukiSU-Ultra): [https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
   - Wild KSU (WKSU): [https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
-Among the three series, Magisk and its variants are user-space-level rooting solutions, and the others are kernel-level ones. 
+Among the three series, Magisk and its variants are user-space-level rooting solutions and cannot bypass the dirty SELinux policy detection. The others are kernel-level ones. 
+Version 31000 of Magisk and its variants change the terminal behavior. For example, it directly uses the system's ``sh``, making classic code such as ``< <(getevent -ql)`` unusable. 
+Versions below 31000 of Magisk and its variants, APatch and its variants, and KernelSU and its variants, all use shell interpreters that support the aforementioned features. 
+In addition, different root managers behave differently regarding whether they automatically close the window after executing an action. 
 
 Currently, almost all GKI device users are using KSU and its variants as the root implementation. 
-
 As the most original root solution that modifies the ``boot`` partition to achieve rooting without physically modifying the ``system`` partition, 
 Magisk and its variants remain the most widely used root implementation method due to their general applicability. 
 
@@ -72,11 +74,13 @@ That is to say, metamodules will control the installation of the rooting-layer s
     - ReSukiSU（SukiSU-Ultra 的下游）：[https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
   - Wild KSU（WKSU）：[https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
-在这三个系列中，Magisk 及其变体是用户空间级别的 root 解决方案，而其他系列是内核级别的 root 解决方案。
+在这三个系列中，Magisk 及其变体是用户空间级别的 root 解决方案，无法规避脏 SELinux 策略检测。其它系列则是内核级别的 root 解决方案。
+Magisk 及其变体的 31000 版本修改了终端行为，例如，直接使用系统的 sh，使得 ``< <(getevent -ql)`` 等经典代码无法使用。
+Magisk 及其变体的 31000 以下版本、Apatch 及其变体和 KSU 及其变体等均使用支持上述特性的 shell 解释器。
+此外，不同的 root 管理器在执行 action 后是否自动关闭窗口的行为有所不同。
 
 目前，GKI 设备的用户几乎都在使用 KSU 及其变体作为 root 实现方案。
-
-由于通用性最强且作为最原始的通过修补 ``boot`` 分区以在不实际修改 ``system`` 分区的情况下实现 root 的 root 实现方案，Magisk 及其变体目前仍然是使用人数最多的 root 实现方案。
+由于通用性最强，作为最原始的通过修补 ``boot`` 分区以在不实际修改 ``system`` 分区的情况下实现 root 的 root 实现方案，Magisk 及其变体目前仍然是使用人数最多的 root 实现方案。
 
 [Riru](./Riru) 和 [Zygisk](./Zygisk) 是两个重要的基础 root 层系统模块，为其它系统模块或插件提供丰富的应用程序编程接口 (API)。
 相比于 Riru，Zygisk 让 Magisk 运行在 Zygote 中，拥有更精确的控制、更好的性能和更强的隐蔽性。

@@ -119,19 +119,19 @@
   - https://t.me/duck_detector
   openSource: true
   category: $D_E$
-  latestVersion: v2026.09.14-aa8892ab4a1e (529)
-  releaseDate: = 20260914
+  latestVersion: v2026.09.23-6f82c2a92df8 (542)
+  releaseDate: = 20260923
   detectionRemark:
     '*': 'This should be the most challenging one among all the detectors. '
     zh-CN: 这应该是目前最难以绕过的检测工具。
 - name: Hunter
   packageName: com.zhenxi.hunter
   category: $D_E$
-  latestVersion: v6.58 (658)
-  releaseDate: '20260129'
+  latestVersion: v6.72 (672)
+  releaseDate: '20260830'
   detectionRemark:
-    '*': 'Please wait about 20 seconds to complete the detection and display. '
-    zh-CN: 请等待 20 秒左右以完成检测和显示。
+    '*': 'Please wait about 30 seconds to complete the detection and display. '
+    zh-CN: 请等待 30 秒左右以完成检测和显示。
   image:
     zh-CN: hunterCN.jpg
 - name: Luna

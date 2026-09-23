@@ -1,6 +1,6 @@
 ## Detectors
 
-Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ Duck Detector
+Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++ $\rightarrow$ Hunter $\rightarrow$ Duck Detector
 
 ### Bank of China (Hong Kong)
 
@@ -117,17 +117,17 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Links**: [https://github.com/eltavine/Duck-Detector-Refactoring](https://github.com/eltavine/Duck-Detector-Refactoring); [https://t.me/duck_detector](https://t.me/duck_detector)
 - **Source Status**: Yes
 - **Category**: Environment Detection
-- **Latest Version**: ``v2026.09.14-aa8892ab4a1e (529)``
-- **Release Date**:  September 14th, 2026
+- **Latest Version**: ``v2026.09.23-6f82c2a92df8 (542)``
+- **Release Date**:  September 23rd, 2026
 - **Detection Remark**: This should be the most challenging one among all the detectors. 
 
 ### Hunter
 
 - **Package Name**: ``com.zhenxi.hunter``
 - **Category**: Environment Detection
-- **Latest Version**: ``v6.58 (658)``
-- **Release Date**:  January 29th, 2026
-- **Detection Remark**: Please wait about 20 seconds to complete the detection and display. 
+- **Latest Version**: ``v6.72 (672)``
+- **Release Date**:  August 30th, 2026
+- **Detection Remark**: Please wait about 30 seconds to complete the detection and display. 
 
 ### Luna
 
@@ -315,7 +315,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 
 ## 检测软件
 
-Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ Duck Detector
+Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ Hunter $\rightarrow$ Duck Detector
 
 ### Bank of China (Hong Kong)
 
@@ -437,17 +437,17 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ Du
 - **官方链接**：[https://github.com/eltavine/Duck-Detector-Refactoring](https://github.com/eltavine/Duck-Detector-Refactoring)；[https://t.me/duck_detector](https://t.me/duck_detector)
 - **开源状态**：是
 - **类别**：环境检测
-- **最新版本**：``v2026.09.14-aa8892ab4a1e (529)``
-- **发行日期**： 2026 年 9 月 14 日
+- **最新版本**：``v2026.09.23-6f82c2a92df8 (542)``
+- **发行日期**： 2026 年 9 月 23 日
 - **检测备注**：This should be the most challenging one among all the detectors. 这应该是目前最难以绕过的检测工具。
 
 ### Hunter
 
 - **应用包名**：``com.zhenxi.hunter``
 - **类别**：环境检测
-- **最新版本**：``v6.58 (658)``
-- **发行日期**： 2026 年 1 月 29 日
-- **检测备注**：Please wait about 20 seconds to complete the detection and display. 请等待 20 秒左右以完成检测和显示。
+- **最新版本**：``v6.72 (672)``
+- **发行日期**： 2026 年 8 月 30 日
+- **检测备注**：Please wait about 30 seconds to complete the detection and display. 请等待 30 秒左右以完成检测和显示。
 - ![hunterCN.jpg](hunterCN.jpg)
 
 ### Luna

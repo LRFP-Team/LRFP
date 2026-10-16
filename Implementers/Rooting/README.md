@@ -23,7 +23,7 @@ only the version in the latest successful workflow triggered by the ``push`` wil
     - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
     - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
   - SukiSU-Ultra: [https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
-    - ReSukiSU (forked from SukiSU-Ultra): [https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
+  - ReSukiSU (forked from SukiSU-Ultra) $\rightarrow$ BakaSU: [https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU) $\rightarrow$ [https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
   - Wild KSU (WKSU): [https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
 Among the three series, Magisk and its variants are user-space-level rooting solutions and cannot bypass the dirty SELinux policy detection. The others are kernel-level ones. 
@@ -71,7 +71,7 @@ That is to say, metamodules will control the installation of the rooting-layer s
     - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
     - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
   - SukiSU-Ultra：[https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
-    - ReSukiSU（SukiSU-Ultra 的下游）：[https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
+  - ReSukiSU（派生于 SukiSU-Ultra）$\rightarrow$ BakaSU：[https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU) $\rightarrow$ [https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
   - Wild KSU（WKSU）：[https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
 在这三个系列中，Magisk 及其变体是用户空间级别的 root 解决方案，无法规避脏 SELinux 策略检测。其它系列则是内核级别的 root 解决方案。

@@ -30,7 +30,7 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20260621: Some LRFP-related repositories have restored their rapid updating paces. 
 - 20260704: QStory announced to be discontinued due to drama. 
 - 20260706: Some plugin developers have received lawyer's letters. 
-- 20260914-present: Some developers' GitHub accounts have been suspended for unknown reasons. Some of their GitHub organizations are suspended as well. 
+- 20260914-present: Some developers' GitHub accounts have been suspended for unknown reasons. Some of their GitHub organizations have been suspended as well. 
 
 ---
 

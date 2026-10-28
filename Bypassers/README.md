@@ -29,7 +29,7 @@ Currently, even with the state-of-the-art bypassing techniques, the following ef
 - Hide USB debugging and even developer options without injection traces detected
 - Hide accessibility mode (even the affected application cannot detect accessibility mode) without injection traces detected
 - Bypass the detection of disabled security flags without injection traces detected
-- Solve the problem that WeChat fails to enable the feature of using fingerprint to approve a payment, while all other applications can use it normally
+- ~~Solve the problem that WeChat fails to enable the feature of using fingerprint to approve a payment, while all other applications can use it normally~~
 - Solve the problem that the STRONG integrity check cannot be passed on devices with the bootloader unlocked when there is no valid keybox
 - Hide injection traces for applications injected at the application level without hooking the environment detection class or functions in the applications
 
@@ -323,7 +323,7 @@ For special cases, please refer to [./specialCases.md](./specialCases.md).
 - 在不暴露注入痕迹的前提下隐藏 USB 调试甚至开发者选项
 - 在不暴露注入痕迹的前提下隐藏无障碍模式（甚至被作用的应用也无法检测到无障碍模式）
 - 在不暴露注入痕迹的前提下绕过对已禁用的安全标志的禁用状态检测
-- 解决微信指纹支付开启失败而其它应用软件都能正常使用的问题
+- ~~解决微信指纹支付开启失败而其它应用软件都能正常使用的问题~~
 - 解决无合法 keybox 时无法在已解锁 bootloader 的设备上通过 STRONG 完整性检验
 - 在不 Hook 被应用层注入的应用的环境检测类或函数的情况下对被应用层注入的应用隐藏注入痕迹
 

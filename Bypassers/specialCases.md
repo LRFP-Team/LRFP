@@ -36,6 +36,10 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - Update the Zygisk Next module to 1.3.0 and later. 
 - Enable both anonymous memory and the Zygisk Next linker, or disable both of them in the Zygisk Next module. 
 
+##### Detected Play Integrity Fix (details contains PiHooks/PixelProps/PlayIntegrityFix with Code 1)
+
+Please refer to [https://github.com/Astoritin/RmPIFProps](https://github.com/Astoritin/RmPIFProps). 
+
 ##### Detected Zygisk
 
 Update the Zygisk Next module to 1.3.0 and later. 
@@ -229,6 +233,10 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 - 将 Zygisk Next 模块升级至 1.3.0 或更高。
 - 在 Zygisk Next 模块中同时启用或同时禁用匿名内存和 Zygisk Next linker。
+
+##### 检测到 Play Integrity Fix（详情显示 PiHooks/PixelProps/PlayIntegrityFix 的代码 1）
+
+请参阅 [https://github.com/Astoritin/RmPIFProps](https://github.com/Astoritin/RmPIFProps)。
 
 ##### 检测到 Zygisk
 

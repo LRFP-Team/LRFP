@@ -1,0 +1,5 @@
+capstone>=5.0,<6
+pyelftools>=0.33,<1
+lz4>=4.4,<5
+# Optional: install for init_boot ramdisks compressed with Zstandard.
+# zstandard>=0.23,<1

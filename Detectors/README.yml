@@ -21,8 +21,6 @@
   officialLink: https://play.google.com/store/apps/details?id=com.icicibank.m2i
   category: $C_A$
 - name: MyLink
-  alias:
-    zh-CN: 八达通
   packageName: com.ChinaMobile
   officialLink: https://play.google.com/store/apps/details?id=com.ChinaMobile
   category: $C_A$
@@ -119,8 +117,8 @@
   - https://t.me/duck_detector
   openSource: true
   category: $D_E$
-  latestVersion: v2026.10.28-0f14f8af9aa3 (1095)
-  releaseDate: = 20261028
+  latestVersion: v2026.11.13-ec98379ce9c3 (1110)
+  releaseDate: = 20261113
   detectionRemark:
     '*': 'This should be the most challenging one among all the detectors. Please report logs to the developers if the application
       crashes after launching. '

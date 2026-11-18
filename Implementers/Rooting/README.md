@@ -15,15 +15,19 @@ only the version in the latest successful workflow triggered by the ``push`` wil
     - [https://t.me/magiskalpha](https://t.me/magiskalpha)
   - Magisk Delta / Kitsune Magisk (built-in whitelist mode): [https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
 - Apatch: [https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) and [https://t.me/APatchChannel](https://t.me/APatchChannel)
-- KernelSU and its variants 
+- KernelSU and its variants
   - KernelSU
     - [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
     - [https://t.me/KernelSU](https://t.me/KernelSU)
   - KernelSU Next (KSUN)
     - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
     - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
-  - SukiSU-Ultra: [https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
-  - ReSukiSU (forked from SukiSU-Ultra) $\rightarrow$ BakaSU: [https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU) $\rightarrow$ [https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
+  - SukiSU-Nova
+    - SukiSU-Ultra (predecessor): [https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
+    - SukiSU-Nova: [https://github.com/SukiSU-Nova/SukiSU-Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)
+  - BakaSU
+    - ReSukiSU (predecessor, forked from SukiSU-Ultra): [https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
+    - BakaSU: [https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
   - Wild KSU (WKSU): [https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
 Among the three series, Magisk and its variants are user-space-level rooting solutions and cannot bypass the dirty SELinux policy detection. The others are kernel-level ones. 
@@ -70,8 +74,12 @@ That is to say, metamodules will control the installation of the rooting-layer s
   - KernelSU Next（KSUN）
     - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
     - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
-  - SukiSU-Ultra：[https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
-  - ReSukiSU（派生于 SukiSU-Ultra）$\rightarrow$ BakaSU：[https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU) $\rightarrow$ [https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
+  - SukiSU-Nova
+    - SukiSU-Ultra（前身）：[https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
+    - SukiSU-Nova：[https://github.com/SukiSU-Nova/SukiSU-Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)
+  - BakaSU
+    - ReSukiSU（前身，基于 SukiSU-Ultra 开发）：[https://github.com/ReSukiSU/ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)
+    - BakaSU：[https://github.com/Baka-SU/BakaSU](https://github.com/Baka-SU/BakaSU)
   - Wild KSU（WKSU）：[https://github.com/WildKernels/Wild_KSU](https://github.com/WildKernels/Wild_KSU)
 
 在这三个系列中，Magisk 及其变体是用户空间级别的 root 解决方案，无法规避脏 SELinux 策略检测。其它系列则是内核级别的 root 解决方案。

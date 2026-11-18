@@ -1,9 +1,9 @@
 ## Events
 
-Related events related to Magisk, Zygisk, and LSPosed are stored here. 
+Events related to LRFP are stored here. 
 
 - 20210201: First LSPosed Release published. 
-- 20210301-20210531: There is a large-scale account blocking phenomenon in Tencent QQ. 
+- 20210301-20210531: There is a large-scale account-blocking phenomenon in Tencent QQ. 
 - 20220120: The Shamiko module was first publicly released. 
 - 20221209: The KernelSU (KSU) was first publicly released. 
 - 20230202: The Zygisk Next module was first publicly released. 
@@ -15,7 +15,7 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20250606: The author of the Play Integrity Fix module announces to discontinue in Telegram, who had previously humorously announced on National Fool's Day that he would be suspending updates due to threats from Google. 
 - 20250609: WX Repair Tool_v2.0 is published. After downloading the core files and FKZ_WX_DATA files, the WechatXposed plugin can be used again. 
 - 20250624: HMA supported the interception of the application list detection by launching activities below Android 13. 
-- 20250917(-20260226): There is a large-scale account logging-out and blocking phenomenon in WeChat. Most blocked accounts are 8.0.56 or above, especially 8.0.62. 
+- 20250917(-20260226): There is a large-scale account logging-out and blocking phenomenon in WeChat. Most blocked accounts are ``8.0.56`` or above, especially ``8.0.62``. 
 - 20251220: Some PIF variants were reported as malicious. 
 - 20260202: Telegram channels containing a large number of ``*.apk`` files were maliciously reported. 
 - 20260325: Some plugins that are explicitly prohibited from distribution in certain regions are being widely disseminated on popular social media platforms in those regions. 
@@ -27,16 +27,17 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20260519: A repository appeared on GitHub that was republished after injecting malicious code into a well-known LRFP project. 
 - 20260530: A repository appeared on GitHub that was republished after plagiarizing a well-known LRFP project. 
 - 20260615 and 20261013: There is a large-scale account logging-out and blocking phenomenon in WeChat. A few users using earlier versions of WeChat with WechatXposed (hotfix disabled) said they were fortunate. 
-- 20260621: Some LRFP-related repositories have restored their rapid updating paces. 
-- 20260704: QStory announced to be discontinued due to drama. 
-- 20260706: Some plugin developers have received lawyer's letters. 
+- 20260621: Some LRFP-related repositories have restored their rapid updating pace. 
+- 20260704: QStory announced it would be discontinued due to drama. 
+- 20260706: Some plugin developers have received lawyers' letters. 
 - 20260914-present: Some developers' GitHub accounts have been suspended for unknown reasons. Some of their GitHub organizations have been suspended as well. 
+- 20261031: BakaSU and some other KSU variants fixed the Linux Security Module (LSM) object layout offset bug that could cause kernel panics in its kernel-level root solution. Please refer to [lsm-offset-bridge](./lsm-offset-bridge) for details. 
 
 ---
 
 ## 事件
 
-与 Magisk、Zygisk 和 LSPosed 相关的事件在此处存储。
+与 LRFP 相关的事件在此处存储。
 
 - 20210201：首个 LSPosed Release 发布。
 - 20210301-20210531：腾讯 QQ 出现大规模封号现象。
@@ -51,7 +52,7 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20250606：Play Integrity Fix 模块作者在 Telegram 宣布停更，此前曾在其国家的愚人节当天幽默地宣布因收到了谷歌的威胁而停更。
 - 20250609：WX Repair Tool_v2.0 发布，下载核心文件和 FKZ_WX_DATA 后可继续使用微 X 模块。
 - 20250624：HMA 支持拦截 Android 13 以下通过启动活动来实现应用程序列表检测的检测。
-- 20250917（至 20260226）：微信出现大规模下线用户和封号现象，集中于 8.0.56 及以上版本，在 8.0.62 版本尤为突出。
+- 20250917（至 20260226）：微信出现大规模下线用户和封号现象，集中于 ``8.0.56`` 及以上版本，在 ``8.0.62`` 版本尤为突出。
 - 20251220：一些 PIF 变体被曝恶意。
 - 20260202：含有大量 ``*.apk`` 文件的 Telegram 频道被恶意举报。
 - 20260325：一些已明确禁止在某些地区传播的插件在该地区的知名社交平台上被大范围传播。
@@ -67,3 +68,4 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20260704：QStory 因抓马事件宣布停更。
 - 20260706：一些插件的开发者被发律师函。
 - 20260914：部分开发者的 GitHub 账号被挂起，原因不明。他们的一些 GitHub 组织随之也被挂起。
+- 20261031：BakaSU 和其它一些 KSU 变体修复了其内核级 root 解决方案中可能因 Linux 安全模块（LSM）对象布局偏移量错误而导致内核崩溃的问题，详情可参阅 [lsm-offset-bridge](./lsm-offset-bridge)。
